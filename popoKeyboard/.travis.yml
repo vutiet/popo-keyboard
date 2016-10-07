@@ -1,0 +1,13 @@
+language: objective-c
+
+branches:
+ only:
+ - master
+
+xcode_project: popoKeyboard.xcodeproj
+xcode_scheme: popoKeyboardTests
+osx_image: xcode8
+xcode_sdk: iphonesimulator10.0
+
+script:
+- xcodebuild clean build test -project popoKeyboard.xcodeproj -scheme popoKeyboardTests
